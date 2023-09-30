@@ -1,0 +1,33 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module">import init from '/rusty_minesweeper/rusty_minesweeper.js';init('/rusty_minesweeper/rusty_minesweeper_bg.wasm');</script>
+    
+    <title>Rusty Minesweeper</title>
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+  
+<link rel="preload" href="/rusty_minesweeper/rusty_minesweeper_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/rusty_minesweeper/rusty_minesweeper.js"></head>
+  <body>
+    <script>
+        document.body.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+    </script>
+  
+</body></html>
